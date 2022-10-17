@@ -1,12 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
-import React from 'react'
+import React from 'react';
 
-const App = () => {
-  return (
-    <div>Hello</div>
-  )
-}
+const App = () => (
+  <div>Hello</div>
+);
 
-export default App
+export default App;
