@@ -1,22 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/img/logo.png';
+import logow from '../assets/img/logow.png';
 
 const Header = () => (
-  <nav>
-    <img src={logo} alt="logo" width={200} />
-    <ul>
+  <nav className="navigation">
+    <img className="navigation__img" src={logow} alt="logo" />
+    <ul className="navigation__menu">
       <NavLink to="/about">
-        <li>About</li>
+        <li className="navigation__link">About</li>
       </NavLink>
       <NavLink to="/skills">
-        <li>My skills</li>
+        <li className="navigation__link">My skills</li>
       </NavLink>
       <NavLink to="/portfolio">
-        <li>Work</li>
+        <li className="navigation__link">Work</li>
       </NavLink>
       <NavLink to="/contact">
-        <li>Contact</li>
+        <li className="navigation__link">Contact</li>
       </NavLink>
     </ul>
   </nav>

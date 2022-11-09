@@ -9,7 +9,7 @@ import twitter from '../assets/img/twitter.svg';
 const SideBar = () => (
   <>
     <Link
-      to={{ pathname: 'https://herewecode.io/' }}
+      to={{ pathname: 'https://github.com/' }}
       target="_blank"
     >
       <img src={github} alt="github" />
