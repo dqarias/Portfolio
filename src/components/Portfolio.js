@@ -14,7 +14,7 @@ const Portfolio = () => {
   };
   return (
     <>
-    <h2>Portfolio</h2>
+      <h2>Portfolio</h2>
       <Slider {...settings}>
         {projects.map((project) => (
           <div key={project.id}>
