@@ -3,7 +3,7 @@ import dino from '../assets/img/dino1.jpeg';
 
 const About = () => (
   <div className="about">
-    <h2 className="about__info-title">About me</h2>
+    <h2 className="about__info-title">About Me</h2>
     <div className="about__info">
       <div className="about__info-desc">
         <p>

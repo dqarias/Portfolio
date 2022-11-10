@@ -3,7 +3,7 @@ import {
   FaGithub, FaMedium, FaLinkedin, FaAngellist, FaTwitter,
 } from 'react-icons/fa';
 
-const SideBar = () => (
+const Media = () => (
   <aside className="social-media">
     <a
       href="https://github.com/dqarias"
@@ -43,4 +43,4 @@ const SideBar = () => (
   </aside>
 );
 
-export default SideBar;
+export default Media;

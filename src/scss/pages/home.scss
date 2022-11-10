@@ -1,15 +1,14 @@
 .main__container{
     display: grid;
-    grid-template-columns: 10% 4% 84% 3%;
+    grid-template-columns: 10% 80% 10%;
     background-color: $primary-color-dark; 
-    /* background-color: rgb(162, 145, 61); */
-    border-bottom: 1rem solid rgb(162, 145, 61);
-    padding-left: 10%;
-    padding-right: 10%;
+    background-color: rgb(162, 145, 61); 
 }
 
 .home{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     padding-top: 7.5rem;
+    padding-right: 15%;
+    padding-left: 15%;
 }

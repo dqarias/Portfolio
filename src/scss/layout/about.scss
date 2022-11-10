@@ -4,8 +4,9 @@
     display: flex;
     flex-direction: column;
     font-family: $font-titles;
-    gap: 1rem;
+    gap: 3rem;
     padding-top: 10rem;
+    min-height: calc(100vh - 7.5rem);
 
     &__info{
         display: flex;
@@ -18,7 +19,7 @@
 
         &-desc{
             font-size: 2rem;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 1.6;
             color: $white-color-dark;
             padding-right: 10rem;
@@ -31,7 +32,9 @@
         filter: grayscale(1);
         
         &:hover{
-            filter: grayscale(0); 
+            filter: grayscale(0);
+            transform: rotate(5deg);
+            scale: 1.2; 
         }
 
     }
