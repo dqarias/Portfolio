@@ -1,0 +1,38 @@
+.about{
+    background-color: $primary-color-dark;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-titles;
+    gap: 1rem;
+    padding-top: 10rem;
+
+    &__info{
+        display: flex;
+        align-items: flex-start;
+        &-title{
+            font-size: 4rem;
+            font-weight: 700;
+            color: $secondary-color-dark;
+        }
+
+        &-desc{
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1.6;
+            color: $white-color-dark;
+            padding-right: 10rem;
+        }
+
+    }
+
+    &__img{
+        width: 20rem;
+        filter: grayscale(1);
+        
+        &:hover{
+            filter: grayscale(0); 
+        }
+
+    }
+}

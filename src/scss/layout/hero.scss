@@ -1,6 +1,6 @@
 .hero{
     background-color: $primary-color-dark;
-    height: calc(100vh - 7.5rem);
+    min-height: calc(100vh - 7.5rem);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -14,13 +14,13 @@
     }
     &__title-2{
         font-size: 6rem;
-        color: rgb(220, 214, 214);
+        color: $white-color-dark;
     }
    
     &__description{
         font-size: 2rem;
         font-weight: 500;
-        color: rgb(220, 214, 214);
+        color: $white-color-dark;
         line-height: 1.6;
         padding-right: 46rem;
         padding-bottom: 1rem;

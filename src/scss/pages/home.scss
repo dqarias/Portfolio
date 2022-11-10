@@ -1,7 +1,8 @@
 .main__container{
     display: grid;
-    grid-template-columns: 10% 2% 90% 2%;
-    background-color: $primary-color-dark;
+    grid-template-columns: 10% 4% 84% 3%;
+    background-color: $primary-color-dark; 
+    /* background-color: rgb(162, 145, 61); */
     border-bottom: 1rem solid rgb(162, 145, 61);
     padding-left: 10%;
     padding-right: 10%;
