@@ -7,14 +7,16 @@ import SideBar from './components/SideBar';
 import './scss/main.scss';
 
 const App = () => (
-  <div>
+  <>
     <Header />
-    <SideBar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<NoMatch />} />
-    </Routes>
-  </div>
+    <div className="main__container">
+      <SideBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+    </div>
+  </>
 
 );
 

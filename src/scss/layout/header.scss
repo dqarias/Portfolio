@@ -3,11 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 6rem;
+    padding: 2% 4%;
     width: 100%;
-    position: sticky;
+    height: 7.5rem;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 0; 
 
     &__img{
         width: 4rem;
@@ -19,9 +20,9 @@
     }
 
     &__link{
-        color: $secondary-color-dark;
+        color: $white-color-dark;
         font-family: $font-titles;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 700;
     }
 }

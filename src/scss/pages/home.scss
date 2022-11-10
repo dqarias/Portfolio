@@ -1,4 +1,11 @@
-body {
-    background-color: #141b1f;
-    color: #fff;
+.main__container{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    background-color: rgb(162, 145, 61);
+    border-bottom: 1rem solid rgb(162, 145, 61);
+}
+
+.home{
+    grid-column: 2/3;
+    padding-top: 7.5rem;
 }

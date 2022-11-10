@@ -1,44 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Linkedin from '../assets/img/Linkedin.svg';
-import medium from '../assets/img/medium.svg';
-import github from '../assets/img/github.svg';
-import angellist from '../assets/img/angellist.svg';
-import twitter from '../assets/img/twitter.svg';
+import {
+  FaGithub, FaMedium, FaLinkedin, FaAngellist, FaTwitter,
+} from 'react-icons/fa';
 
 const SideBar = () => (
-  <>
-    <Link
-      to={{ pathname: 'https://github.com/' }}
+  <aside className="social-media">
+    <a
+      href="https://github.com/dqarias"
       target="_blank"
+      rel="noreferrer"
     >
-      <img src={github} alt="github" />
-    </Link>
-    <Link
-      to={{ pathname: 'https://herewecode.io/' }}
+      <FaGithub className="social-media__icon" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/dino-ronald-quispe-arias/"
       target="_blank"
+      rel="noreferrer"
     >
-      <img src={Linkedin} alt="linkedin" />
-    </Link>
-    <Link
-      to={{ pathname: 'https://herewecode.io/' }}
+      <FaLinkedin className="social-media__icon" />
+    </a>
+    <a
+      href="https://medium.com/@dino.quispea"
       target="_blank"
+      rel="noreferrer"
     >
-      <img src={medium} alt="medium" />
-    </Link>
-    <Link
-      to={{ pathname: 'https://herewecode.io/' }}
+      <FaMedium className="social-media__icon" />
+    </a>
+    <a
+      href="https://angel.co/u/dino-ronald-quispe-arias"
       target="_blank"
+      rel="noreferrer"
     >
-      <img src={angellist} alt="angellist" />
-    </Link>
-    <Link
-      to={{ pathname: 'https://herewecode.io/' }}
+      <FaAngellist className="social-media__icon" />
+    </a>
+    <a
+      href="https://twitter.com/DinoRonald7"
       target="_blank"
+      rel="noreferrer"
     >
-      <img src={twitter} alt="twitter" />
-    </Link>
-  </>
+      <FaTwitter className="social-media__icon" />
+    </a>
+  </aside>
 );
 
 export default SideBar;
