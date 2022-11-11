@@ -1,6 +1,6 @@
 .about{
     background-color: $primary-color-dark;
-    height: 80vh;
+    min-height: calc(100vh - 7.5rem);
     display: flex;
     flex-direction: column;
     font-family: $font-titles;
