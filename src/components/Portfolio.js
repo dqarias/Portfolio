@@ -26,6 +26,8 @@ const Portfolio = () => {
             description={project.description}
             image={project.image}
             language={project.language}
+            live={project.live}
+            source={project.source}
           />
         ))}
       </Slider>

@@ -2,7 +2,7 @@
     grid-column-start: 1;
     grid-column-end: 2;
     background-color: $primary-color-dark;
-    background-color: aqua;
+    /* background-color: aqua; */
     padding-bottom: 8rem;
     display: flex;
     flex-direction: column;
@@ -20,6 +20,7 @@
 
      &:hover{
         color: #a3225e;
+        scale: 1.5;
      }
     }
     
