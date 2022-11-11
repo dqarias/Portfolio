@@ -9,9 +9,9 @@ const Header = () => (
       <NavLink to="/about">
         <li className="navigation__link">About</li>
       </NavLink>
-      <NavLink to="/skills">
+      {/* <NavLink to="/skills">
         <li className="navigation__link">My skills</li>
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/portfolio">
         <li className="navigation__link">Work</li>
       </NavLink>
