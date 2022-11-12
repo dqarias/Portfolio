@@ -11,6 +11,13 @@
     &__send-message{
         grid-column-start: 1;
         grid-column-end: 2;
+
+        &-succeed{
+            font-size: 2rem;
+            font-weight: 300;
+            color: $white-color-dark;
+            padding-top: 2rem;
+        }
     }
 
     &__get-info{
@@ -76,6 +83,12 @@
             font-family: $font-titles-2;
             margin: 0.5rem;
             background-color: $white-color-dark;
+
+            &-error{
+                font-size: 1.6rem;
+                margin: 0.5rem;
+                color: rgb(253, 66, 66);
+            }
         }
 
         &-button{
