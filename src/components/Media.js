@@ -4,43 +4,43 @@ import {
 } from 'react-icons/fa';
 
 const Media = () => (
-  <aside className="social-media">
+  <>
     <a
       href="https://github.com/dqarias"
       target="_blank"
       rel="noreferrer"
     >
-      <FaGithub className="social-media__icon" />
+      <FaGithub className="social-media__icon social-media-mobile__icon" />
     </a>
     <a
       href="https://www.linkedin.com/in/dino-ronald-quispe-arias/"
       target="_blank"
       rel="noreferrer"
     >
-      <FaLinkedin className="social-media__icon" />
+      <FaLinkedin className="social-media__icon social-media-mobile__icon" />
     </a>
     <a
       href="https://medium.com/@dino.quispea"
       target="_blank"
       rel="noreferrer"
     >
-      <FaMedium className="social-media__icon" />
+      <FaMedium className="social-media__icon social-media-mobile__icon" />
     </a>
     <a
       href="https://angel.co/u/dino-ronald-quispe-arias"
       target="_blank"
       rel="noreferrer"
     >
-      <FaAngellist className="social-media__icon" />
+      <FaAngellist className="social-media__icon social-media-mobile__icon" />
     </a>
     <a
       href="https://twitter.com/DinoRonald7"
       target="_blank"
       rel="noreferrer"
     >
-      <FaTwitter className="social-media__icon" />
+      <FaTwitter className="social-media__icon social-media-mobile__icon" />
     </a>
-  </aside>
+  </>
 );
 
 export default Media;
