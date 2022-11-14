@@ -8,36 +8,41 @@
 }
 
 :root {
-    //Setting 1rem to 10px
-    font-size: 62.5%;
+  //Setting 1rem to 10px
+  font-size: 62.5%;
 }
 
-body{
-    line-height: 1;
+body {
+  line-height: 1;
 }
 
-ol, ul{
-    list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-blockquote, q{
-    quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after{
-    content: '';
-    content: none;
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
 }
 
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-input{
-    border-radius: 0;
+input {
+  border-radius: 0;
 }

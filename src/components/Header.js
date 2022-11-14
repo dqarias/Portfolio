@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { CgMenuLeft } from 'react-icons/cg';
 import logow from '../assets/img/logow.png';
 
 const Header = () => (
@@ -19,6 +20,9 @@ const Header = () => (
         <li className="navigation__link">Contact</li>
       </NavLink>
     </ul>
+    <div className="navigation__hamburguer">
+      <CgMenuLeft />
+    </div>
   </nav>
 
 );
