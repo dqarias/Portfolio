@@ -2,8 +2,23 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { motion } from 'framer-motion';
 import projects from '../data/projects';
 import Project from './Project';
+
+const textAnimate = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.5,
+    },
+  },
+
+};
 
 const Portfolio = () => {
   const settings = {
@@ -37,8 +52,23 @@ const Portfolio = () => {
     ],
   };
   return (
-    <div className="portfolio">
-      <h2 className="portfolio__title">Portfolio</h2>
+    <motion.div
+      className="portfolio"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+    >
+      <div className="portfolio__tl">
+        <motion.h2
+          className="portfolio__title"
+          variants={textAnimate}
+        >
+          Portfolio
+        </motion.h2>
+        <span className="portfolio__line" />
+      </div>
+
       <Slider {...settings}>
         {projects.map((project) => (
           <Project
@@ -52,7 +82,7 @@ const Portfolio = () => {
           />
         ))}
       </Slider>
-    </div>
+    </motion.div>
   );
 };
 

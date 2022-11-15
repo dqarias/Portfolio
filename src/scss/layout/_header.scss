@@ -1,7 +1,6 @@
 .navigation {
   display: flex;
   background-color: $primary-color-dark;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2% 4%;
@@ -11,7 +10,7 @@
   top: 0;
   left: 0;
   z-index: 1;
- 
+
   &__img {
     width: 4rem;
     display: none;
@@ -42,18 +41,18 @@
       display: none;
     }
 
-    &-div{
-      position:absolute;
+    &-div {
+      position: absolute;
       top: 0;
       left: 0;
-      min-width:100vw;
-      min-height:100vh;
+      min-width: 100vw;
+      min-height: 100vh;
       background-color: #141b1ffa;
-      color:$white-color-dark;
+      color: $white-color-dark;
       z-index: -1;
     }
 
-    &-menu{
+    &-menu {
       padding-top: 8rem;
       display: flex;
       flex-direction: column;
@@ -61,19 +60,17 @@
       justify-content: center;
       gap: 4rem;
 
-      &-img{
+      &-img {
         width: 4rem;
       }
 
-      &-link{
+      &-link {
         color: $white-color-dark;
-    font-family: $font-titles;
-    font-size: 2rem;
-    font-weight: 700;
+        font-family: $font-titles;
+        font-size: 2rem;
+        font-weight: 700;
       }
     }
-
-    
   }
 
   &__link {
@@ -84,10 +81,10 @@
   }
 }
 
-.btn-icon{
+.btn-icon {
   font-size: 4rem;
   color: $white-color-dark;
-  background-color: transparent; 
+  background-color: transparent;
   border: none;
   position: absolute;
   z-index: 1;

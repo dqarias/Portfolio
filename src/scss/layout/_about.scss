@@ -11,15 +11,33 @@
     padding-top: 10rem;
   }
 
+  &__tl {
+    display: flex;
+    align-items: center;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 2rem;
 
     &-title {
       font-size: 2.4rem;
       font-weight: 700;
       color: $secondary-color-dark;
+    }
+
+    &-line {
+      width: 60%;
+      height: 1px;
+      background-color: $secondary-color-dark;
+      margin-left: 1rem;
+
+      @include for-tablet-portrait-up {
+        height: 1px;
+        width: 40%;
+      }
     }
 
     &-desc {

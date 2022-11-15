@@ -1,14 +1,43 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { MdLocationOn, MdSmartphone, MdEmail } from 'react-icons/md';
+import { motion } from 'framer-motion';
+
+const textAnimate = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.5,
+    },
+  },
+
+};
 
 const Contact = () => {
   const [state, handleSubmit] = useForm('mgedpkaq');
 
   return (
-    <section className="contact" id="contact-me">
-      <div className="contact__send-message">
-        <h3 className="contact__title">Send me a Message</h3>
+    <motion.section
+      className="contact"
+      id="contact-me"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+    >
+      <div
+        className="contact__send-message"
+      >
+        <motion.h3
+          className="contact__title"
+          variants={textAnimate}
+        >
+          Send me a Message
+        </motion.h3>
         {state && state.succeeded ? (
           <h2 className="contact__send-message-succeed">Your Message has been sent successfully!</h2>
         )
@@ -65,8 +94,15 @@ const Contact = () => {
             </form>
           )}
       </div>
-      <div className="contact__get-info">
-        <h3 className="contact__title">Get in touch</h3>
+      <div
+        className="contact__get-info"
+      >
+        <motion.h3
+          className="contact__title"
+          variants={textAnimate}
+        >
+          Get in touch
+        </motion.h3>
         <p className="contact__info">
           If you have an application you are interested
           in developing, a feature that you need built
@@ -91,7 +127,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

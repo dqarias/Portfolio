@@ -1,8 +1,14 @@
 import React from 'react';
 import TypeWriterEffect from 'react-typewriter-effect';
+import { motion } from 'framer-motion';
 
 const Hero = () => (
-  <section className="hero">
+  <motion.section
+    className="hero"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.5, duration: 0.5 }}
+  >
     <h2 className="hero__title-1">Hi, my name is</h2>
     <h2 className="hero__title-2">Dino Quispe</h2>
     <div className="hero__title-3">
@@ -51,7 +57,7 @@ const Hero = () => (
       hestiate to contact me.
     </p>
     <button className="btn" type="button">LET’S CONNECT</button>
-  </section>
+  </motion.section>
 );
 
 export default Hero;

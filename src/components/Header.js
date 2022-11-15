@@ -30,8 +30,17 @@ const Header = () => {
 
   return (
     <>
-      <nav className="navigation">
-        <img className="navigation__img" src={logow} alt="logo" />
+      <motion.nav
+        className="navigation"
+        initial={{ y: -250 }}
+        animate={{ y: -10 }}
+        transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+      >
+        <motion.img
+          className="navigation__img"
+          src={logow}
+          alt="logo"
+        />
         <ul className="navigation__menu">
           <NavLink to="/about">
             <li className="navigation__link">About</li>
@@ -143,7 +152,7 @@ const Header = () => {
               )
           }
         </div>
-      </nav>
+      </motion.nav>
 
     </>
 
