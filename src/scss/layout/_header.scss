@@ -14,6 +14,11 @@
  
   &__img {
     width: 4rem;
+    display: none;
+
+    @include for-tablet-portrait-up {
+      display: inline-block;
+    }
   }
 
   &__menu {
@@ -38,8 +43,9 @@
       background-color: rgb(22, 216, 216);
       position:absolute;
       top: 0;
-      min-width:100%;
-      min-height:50vh;
+      left: 0;
+      min-width:100vw;
+      min-height:100vh;
       background-color:rgb(185, 59, 59);
       color:#fff;
       
@@ -47,6 +53,7 @@
     }
 
     &-menu{
+      padding-top: 8rem;
       background-color: aliceblue;
     }
   }

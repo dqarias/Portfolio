@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { CgMenuLeft, CgClose } from 'react-icons/cg';
+import { BiMenuAltLeft } from 'react-icons/bi';
+import { CgCloseO } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
-/* import logow from '../assets/img/logow.png'; */
+import logow from '../assets/img/logow.png';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -30,7 +31,7 @@ const Header = () => {
   return (
     <>
       <nav className="navigation">
-        {/* <img className="navigation__img" src={logow} alt="logo" /> */}
+        <img className="navigation__img" src={logow} alt="logo" />
         <ul className="navigation__menu">
           <NavLink to="/about">
             <li className="navigation__link">About</li>
@@ -43,12 +44,13 @@ const Header = () => {
           </NavLink>
         </ul>
         <div className="navigation__hamburguer">
+
           <button
             className="btn-icon"
             type="button"
             onClick={isOpen}
           >
-            <CgMenuLeft />
+            <BiMenuAltLeft />
           </button>
           <AnimatePresence>
             {open && (
@@ -64,7 +66,7 @@ const Header = () => {
                 onClick={closeMenu}
                 type="button"
               >
-                <CgClose />
+                <CgCloseO />
               </button>
               <motion.ul
                 className="navigation__hamburguer-menu"
@@ -72,6 +74,7 @@ const Header = () => {
                 <NavLink to="/about">
                   <motion.li
                     className="navigation__link"
+                    onClick={closeMenu}
                     initial={{ y: 80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.8 }}
@@ -90,6 +93,7 @@ const Header = () => {
                 <NavLink to="/portfolio">
                   <motion.li
                     className="navigation__link"
+                    onClick={closeMenu}
                     initial={{ y: 80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.7 }}
@@ -108,6 +112,7 @@ const Header = () => {
                 <NavLink to="/contact">
                   <motion.li
                     className="navigation__link"
+                    onClick={closeMenu}
                     initial={{ y: 80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.6 }}
