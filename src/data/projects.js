@@ -48,8 +48,8 @@ const projects = [
     description: 'This website display data from an API, it allows users to: book or cancel rocket reservation, join or leave a mission.',
     descriptionDetail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     language: ['React', 'Redux', 'CSS'],
-    live: 'https://still-hamlet-25804.herokuapp.com/',
-    source: 'https://space-traveler-hub-microverse.herokuapp.com/',
+    live: 'https://space-traveler-hub-microverse.herokuapp.com/',
+    source: 'https://github.com/darikmohammed/Space_Travelers_Hub',
   },
   {
     id: '1',
@@ -90,8 +90,8 @@ const projects = [
     description: '"Math magicians" is a website for all fans of mathematics. it allows users to: make simple calculations, read a random math-related quote.',
     descriptionDetail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     language: ['React', 'CSS'],
-    live: 'https://air-pollution-app-dino.netlify.app/',
-    source: 'https://math-magician-ronald.netlify.app/',
+    live: 'https://math-magician-ronald.netlify.app/',
+    source: 'https://github.com/dqarias/math-magicians',
   },
   {
     id: '3',
