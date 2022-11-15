@@ -44,14 +44,6 @@ const Header = () => {
           </NavLink>
         </ul>
         <div className="navigation__hamburguer">
-
-          <button
-            className="btn-icon"
-            type="button"
-            onClick={isOpen}
-          >
-            <BiMenuAltLeft />
-          </button>
           <AnimatePresence>
             {open && (
             <motion.div
@@ -62,18 +54,14 @@ const Header = () => {
               transition={{ duration: 0.5 }}
               exit="exit"
             >
-              <button
-                onClick={closeMenu}
-                type="button"
-              >
-                <CgCloseO />
-              </button>
+
               <motion.ul
                 className="navigation__hamburguer-menu"
               >
+                <motion.img className="navigation__hamburguer-menu-img" src={logow} alt="logo" />
                 <NavLink to="/about">
                   <motion.li
-                    className="navigation__link"
+                    className="navigation__hamburguer-menu-link"
                     onClick={closeMenu}
                     initial={{ y: 80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -92,7 +80,7 @@ const Header = () => {
                 </NavLink>
                 <NavLink to="/portfolio">
                   <motion.li
-                    className="navigation__link"
+                    className="navigation__hamburguer-menu-link"
                     onClick={closeMenu}
                     initial={{ y: 80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -111,7 +99,7 @@ const Header = () => {
                 </NavLink>
                 <NavLink to="/contact">
                   <motion.li
-                    className="navigation__link"
+                    className="navigation__hamburguer-menu-link"
                     onClick={closeMenu}
                     initial={{ y: 80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -133,7 +121,27 @@ const Header = () => {
 
             )}
           </AnimatePresence>
-
+          {
+            open
+              ? (
+                <button
+                  onClick={closeMenu}
+                  type="button"
+                  className="btn-icon"
+                >
+                  <CgCloseO />
+                </button>
+              )
+              : (
+                <button
+                  className="btn-icon"
+                  type="button"
+                  onClick={isOpen}
+                >
+                  <BiMenuAltLeft />
+                </button>
+              )
+          }
         </div>
       </nav>
 
