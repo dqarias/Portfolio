@@ -4,13 +4,23 @@ import { PropTypes } from 'prop-types';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Project = ({
-  title, description, image, language, live, source,
+  title, description, image, language, live, source, darkMode,
 }) => (
-  <div className="portfolio__card">
+  <div className={
+    darkMode
+      ? 'portfolio__card'
+      : 'portfolio__card portfolio__card-light'
+  }
+  >
     <div>
       <img className="portfolio__card-image" src={image} alt={title} />
     </div>
-    <div className="portfolio__card-info">
+    <div className={
+      darkMode
+        ? 'portfolio__card-info'
+        : 'portfolio__card-info portfolio__card-info-light'
+    }
+    >
       <h2 className="portfolio__card-info-title">{title}</h2>
       <p className="portfolio__card-info-description">{description}</p>
       {language.map((lang) => (
@@ -18,7 +28,11 @@ const Project = ({
       ))}
       <div className="portfolio__card-info-links">
         <a
-          className="portfolio__card-info-links-a"
+          className={
+            darkMode
+              ? 'portfolio__card-info-links-a'
+              : 'portfolio__card-info-links-a portfolio__card-info-links-a-light'
+          }
           href={source}
           target="_blank"
           rel="noreferrer"
@@ -26,7 +40,11 @@ const Project = ({
           <FaGithub className="portfolio__card-info-links-icon" />
         </a>
         <a
-          className="portfolio__card-info-links-a"
+          className={
+            darkMode
+              ? 'portfolio__card-info-links-a'
+              : 'portfolio__card-info-links-a portfolio__card-info-links-a-light'
+          }
           href={live}
           target="_blank"
           rel="noreferrer"

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
 import projects from '../data/projects';
 import Project from './Project';
+import ThemeContext from '../context/theme/ThemeContext';
 
 const textAnimate = {
   offscreen: { y: 100, opacity: 0 },
@@ -21,11 +22,12 @@ const textAnimate = {
 };
 
 const Portfolio = () => {
+  const { darkMode } = useContext(ThemeContext);
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
@@ -53,7 +55,11 @@ const Portfolio = () => {
   };
   return (
     <motion.div
-      className="portfolio"
+      className={
+        darkMode
+          ? 'portfolio'
+          : 'portfolio portfolio-light'
+      }
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.5 }}
@@ -79,6 +85,7 @@ const Portfolio = () => {
             language={project.language}
             live={project.live}
             source={project.source}
+            darkMode={darkMode}
           />
         ))}
       </Slider>

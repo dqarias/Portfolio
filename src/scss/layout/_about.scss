@@ -7,6 +7,10 @@
   padding-top: 2rem;
   min-height: calc(100vh - 7.5rem);
 
+  &-light{
+    background-color: $primary-color-light;
+  }
+
   @include for-tablet-portrait-up {
     padding-top: 10rem;
   }
@@ -46,6 +50,10 @@
       line-height: 1.4;
       color: $white-color-dark;
       padding-bottom: 2rem;
+
+      &-light{
+        color: $black-color-light;
+      }
     }
 
     @include for-tablet-landscape-up {
