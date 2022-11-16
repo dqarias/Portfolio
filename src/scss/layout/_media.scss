@@ -20,9 +20,18 @@
     top: 7.5rem;
     left: 0;
 
+    &-light{
+      background-color: $primary-color-light;
+    }
+
     &__icon {
       color: $white-color-dark;
       font-size: 2.5rem;
+
+      &-light{
+        color: $black-color-light;
+        font-size: 2.5rem;
+      }
 
       &:hover {
         color: #a3225e;

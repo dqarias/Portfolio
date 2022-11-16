@@ -4,13 +4,13 @@ import ThemeContext from '../context/theme/ThemeContext';
 
 const Config = () => {
   const { darkMode, handleTheme } = useContext(ThemeContext);
-  console.log('Theme', darkMode);
+
   return (
     <div
       className={
       darkMode
         ? 'config'
-        : 'config__light'
+        : 'config config__light'
     }
     >
       <button

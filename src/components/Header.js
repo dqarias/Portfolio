@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { CgCloseO } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
+import ThemeContext from '../context/theme/ThemeContext';
 import logow from '../assets/img/logow.png';
+import logob from '../assets/img/logob.png';
+import logoWhite from '../assets/img/logoWhite.png';
 
 const Header = () => {
+  const { darkMode } = useContext(ThemeContext);
   const [open, setOpen] = useState(false);
 
   const isOpen = () => {
@@ -31,28 +35,67 @@ const Header = () => {
   return (
     <>
       <motion.nav
-        className="navigation"
+        className={
+          darkMode
+            ? 'navigation'
+            : 'navigation navigation__light'
+        }
         initial={{ y: -250 }}
         animate={{ y: -10 }}
         transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
       >
         <motion.img
           className="navigation__img"
-          src={logow}
+          src={
+            darkMode
+              ? logoWhite
+              : logob
+          }
           alt="logo"
         />
-        <ul className="navigation__menu">
+        <ul
+          className="navigation__menu"
+        >
           <NavLink to="/about">
-            <li className="navigation__link">About</li>
+            <li
+              className={
+              darkMode
+                ? 'navigation__link'
+                : 'navigation__link navigation__link-light'
+            }
+            >
+              About
+            </li>
           </NavLink>
           <NavLink to="/portfolio">
-            <li className="navigation__link">Work</li>
+            <li
+              className={
+                darkMode
+                  ? 'navigation__link'
+                  : 'navigation__link navigation__link-light'
+              }
+            >
+              Work
+            </li>
           </NavLink>
           <NavLink to="/contact">
-            <li className="navigation__link">Contact</li>
+            <li
+              className={
+                darkMode
+                  ? 'navigation__link'
+                  : 'navigation__link navigation__link-light'
+              }
+            >
+              Contact
+            </li>
           </NavLink>
         </ul>
-        <div className="navigation__hamburguer">
+        <div className={
+          darkMode
+            ? 'navigation__hamburguer'
+            : 'navigation__hamburguer navigation__hamburguer__light'
+        }
+        >
           <AnimatePresence>
             {open && (
             <motion.div
@@ -143,7 +186,11 @@ const Header = () => {
               )
               : (
                 <button
-                  className="btn-icon"
+                  className={
+                    darkMode
+                      ? 'btn-icon'
+                      : 'btn-icon btn-icon-light'
+                  }
                   type="button"
                   onClick={isOpen}
                 >
