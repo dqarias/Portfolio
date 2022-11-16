@@ -40,6 +40,21 @@ const About = () => {
   const { darkMode } = useContext(ThemeContext);
   const { soundMode } = useContext(SoundContext);
   const [buttonSound] = useSound(hoverButton);
+
+  const handleDownloadResume = () => {
+    fetch('ResumeDinoRonald.pdf').then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        const alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'ResumeDinoRonald.pdf';
+        alink.click();
+      });
+    });
+  };
+
   return (
     <motion.div
       className={
@@ -82,6 +97,7 @@ const About = () => {
           <button
             className="about__info-button btn"
             type="button"
+            onClick={handleDownloadResume}
             onMouseOver={
           soundMode
             ? buttonSound

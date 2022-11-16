@@ -48,7 +48,7 @@ const Config = () => {
         {
           soundMode
             ? (
-              <FaVolumeOff
+              <FaVolumeUp
                 onClick={closeSound}
                 className={
         darkMode
@@ -57,7 +57,7 @@ const Config = () => {
       }
               />
             ) : (
-              <FaVolumeUp
+              <FaVolumeOff
                 onClick={openSound}
                 className={
         darkMode
