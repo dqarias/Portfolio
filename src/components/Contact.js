@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { MdLocationOn, MdSmartphone, MdEmail } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import ThemeContext from '../context/theme/ThemeContext';
 
 const textAnimate = {
   offscreen: { y: 100, opacity: 0 },
@@ -19,10 +20,15 @@ const textAnimate = {
 
 const Contact = () => {
   const [state, handleSubmit] = useForm('mgedpkaq');
+  const { darkMode } = useContext(ThemeContext);
 
   return (
     <motion.section
-      className="contact"
+      className={
+        darkMode
+          ? 'contact'
+          : 'contact contact-light'
+      }
       id="contact-me"
       initial="offscreen"
       whileInView="onscreen"
@@ -48,7 +54,11 @@ const Contact = () => {
               <ul className="contact__message-form">
                 <li className="contact__message-list">
                   <input
-                    className="contact__message-input"
+                    className={
+                      darkMode
+                        ? 'contact__message-input'
+                        : 'contact__message-input contact__message-input-light'
+                    }
                     type="text"
                     name="user_name"
                     id="name"
@@ -57,7 +67,11 @@ const Contact = () => {
                     required
                   />
                   <input
-                    className="contact__message-input"
+                    className={
+                      darkMode
+                        ? 'contact__message-input'
+                        : 'contact__message-input contact__message-input-light'
+                    }
                     type="email"
                     name="email"
                     id="email"
@@ -67,7 +81,11 @@ const Contact = () => {
                 </li>
                 <li className="contact__message-list">
                   <textarea
-                    className="contact__message-input"
+                    className={
+                      darkMode
+                        ? 'contact__message-input'
+                        : 'contact__message-input contact__message-input-light'
+                    }
                     name="message"
                     id="message"
                     cols="30"
@@ -95,7 +113,11 @@ const Contact = () => {
           )}
       </div>
       <div
-        className="contact__get-info"
+        className={
+          darkMode
+            ? 'contact__get-info'
+            : 'contact__get-info contact__get-info-light'
+        }
       >
         <motion.h3
           className="contact__title"
@@ -103,7 +125,12 @@ const Contact = () => {
         >
           Get in touch
         </motion.h3>
-        <p className="contact__info">
+        <p className={
+          darkMode
+            ? 'contact__info'
+            : 'contact__info contact__info-light'
+        }
+        >
           If you have an application you are interested
           in developing, a feature that you need built
           or a project that needs coding. I’d love

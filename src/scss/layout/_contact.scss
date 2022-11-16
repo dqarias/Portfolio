@@ -5,6 +5,10 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
 
+  &-light{
+    background-color: $primary-color-light;
+  }
+
   @include for-tablet-landscape-up {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -36,6 +40,10 @@
     width: 90%;
     color: $white-color-dark;
     align-items: flex-start;
+
+    &-light{
+      color: $black-color-light;
+    }
 
     &-contact {
       font-size: 1.4rem;
@@ -87,6 +95,10 @@
     line-height: 1.5;
     color: $white-color-dark;
 
+    &-light{
+      color: $black-color-light;
+    }
+
     @include for-tablet-portrait-up {
       font-size: 1.6rem;
       font-weight: 500;
@@ -97,11 +109,9 @@
     &-form {
       display: flex;
       flex-direction: column;
-      background-color: $primary-color-dark;
     }
 
     &-list {
-      background-color: $primary-color-dark;
       display: flex;
     }
 
@@ -111,18 +121,27 @@
       padding: 1rem 2rem;
       font-family: $font-titles-2;
       margin: 0.5rem;
-      background-color: $white-color-dark;
+      background-color: #f5f5f5;
+
+      &-light{
+        background-color: #f5f5f5;
+        &:focus {
+          outline-color: $secondary-color-dark;
+          background-color: #f5f5f5;
+        }
+        
+      }
 
       &:focus {
         outline-color: $secondary-color-dark;
-        background-color: $white-color-dark;
+        background-color: #f5f5f5;
       }
 
       &:-webkit-autofill,
       &:-webkit-autofill:hover,
       &:-webkit-autofill:focus,
       &:-webkit-autofill:active {
-        box-shadow: 0 0 0 30px $white-color-dark inset !important;
+        box-shadow: 0 0 0 30px #f5f5f5 inset !important;
       }
 
       &-error {

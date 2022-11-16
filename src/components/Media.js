@@ -18,7 +18,7 @@ const Media = () => {
           className={
         darkMode
           ? 'social-media__icon social-media-mobile__icon'
-          : 'social-media__icon-light social-media-mobile__icon-light'
+          : 'social-media__icon social-media__icon-light social-media-mobile__icon-light'
       }
         />
       </a>

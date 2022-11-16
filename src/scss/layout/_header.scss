@@ -78,6 +78,21 @@
           color: $black-color-light;
         }
       }
+
+      &-config{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        padding-bottom: 8rem;
+        gap: 2.4rem;
+
+        &-btn{
+          background-color: transparent;
+          color: $white-color-dark;
+          font-size: 2.4rem;
+          cursor: pointer;
+        }
+      }
     }
   }
 

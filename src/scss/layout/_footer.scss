@@ -27,6 +27,7 @@
 
     &-light{
       color: $black-color-light;
+      font-size: 2.5rem;
       &:hover {
         color: #a3225e;
         scale: 1.5;
@@ -41,5 +42,8 @@
 
   &-info {
     color: $white-color-dark;
+    &-light{
+      color: $black-color-light;
+    }
   }
 }

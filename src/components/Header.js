@@ -3,13 +3,14 @@ import { NavLink } from 'react-router-dom';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { CgCloseO } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaMoon, FaSun, FaVolumeUp } from 'react-icons/fa';
 import ThemeContext from '../context/theme/ThemeContext';
 import logow from '../assets/img/logow.png';
 import logob from '../assets/img/logob.png';
 import logoWhite from '../assets/img/logoWhite.png';
 
 const Header = () => {
-  const { darkMode } = useContext(ThemeContext);
+  const { darkMode, handleTheme } = useContext(ThemeContext);
   const [open, setOpen] = useState(false);
 
   const isOpen = () => {
@@ -168,7 +169,45 @@ const Header = () => {
                     Contact
                   </motion.li>
                 </NavLink>
+                <motion.div
+                  className="navigation__hamburguer-menu-config"
+                  initial={{ y: 80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                  exit={{
+                    opacity: 0,
+                    y: 90,
+                    transition: {
+                      ease: 'easeInOut',
+                      delay: 1,
+                    },
+                  }}
+                >
+                  <button
+                    type="button"
+                    className="navigation__hamburguer-menu-config-btn"
+                    onClick={() => {
+                      setOpen(false);
+                      handleTheme();
+                    }}
+                  >
+                    {
+                  darkMode ? (
+                    <FaSun
+                      className=""
+                    />
+                  ) : (
+                    <FaMoon
+                      className=""
+                    />
+                  )
+
+                }
+                  </button>
+                  <FaVolumeUp />
+                </motion.div>
               </motion.ul>
+
             </motion.div>
 
             )}
