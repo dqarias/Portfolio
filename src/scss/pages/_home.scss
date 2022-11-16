@@ -1,7 +1,11 @@
 .main__container {
   display: grid;
   grid-template-columns: 100%;
-  background-color: $primary-color-dark;
+  background-color: $primary-color-light;
+
+  &-light{
+    background-color: $primary-color-light;
+  }
 
   /* background-color: rgb(162, 145, 61);  */
 

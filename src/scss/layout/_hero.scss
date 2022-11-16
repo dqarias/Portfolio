@@ -2,6 +2,10 @@
   min-height: calc(100vh - 7.5rem);
   background-color: $primary-color-dark;
 
+  &-light{
+    background-color: $primary-color-light;
+  }
+
   /* background-color: rgb(37, 46, 43); */
   font-family: $font-titles-1;
   display: flex;
@@ -18,6 +22,10 @@
   &__title-2 {
     font-size: 3.2rem;
     color: $white-color-dark;
+
+    &-light{
+      color: $black-color-light;
+    }
   }
 
   &__title-3 {
@@ -34,6 +42,10 @@
     color: $white-color-dark;
     line-height: 1.6;
     padding-bottom: 4rem;
+
+    &-light{
+      color: $black-color-light;
+    }
   }
 
   @include for-tablet-portrait-up {
@@ -43,7 +55,6 @@
 
     &__title-2 {
       font-size: 6rem;
-      color: $white-color-dark;
     }
 
     &__title-3 {
