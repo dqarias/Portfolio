@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaMoon, FaSun, FaVolumeUp } from 'react-icons/fa';
 import ThemeContext from '../context/theme/ThemeContext';
 import logow from '../assets/img/logow.png';
-import logob from '../assets/img/logob.png';
+import logob from '../assets/img/logocd.png';
 import logoWhite from '../assets/img/logoWhite.png';
 
 const Header = () => {

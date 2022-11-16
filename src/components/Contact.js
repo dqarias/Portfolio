@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { MdLocationOn, MdSmartphone, MdEmail } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import useSound from 'use-sound';
+import hoverButton from '../assets/sounds/hoverButton.wav';
 import ThemeContext from '../context/theme/ThemeContext';
+import SoundContext from '../context/sound/SoundContext';
 
 const textAnimate = {
   offscreen: { y: 100, opacity: 0 },
@@ -21,6 +24,8 @@ const textAnimate = {
 const Contact = () => {
   const [state, handleSubmit] = useForm('mgedpkaq');
   const { darkMode } = useContext(ThemeContext);
+  const { soundMode } = useContext(SoundContext);
+  const [buttonSound] = useSound(hoverButton);
 
   return (
     <motion.section
@@ -104,7 +109,21 @@ const Contact = () => {
                   />
                 </li>
                 <li className="contact__message-button">
-                  <button className="btn" type="submit" disabled={state.submitting}>
+                  <button
+                    className="btn"
+                    type="submit"
+                    disabled={state.submitting}
+                    onMouseOver={
+                    soundMode
+                      ? buttonSound
+                      : null
+                    }
+                    onFocus={
+                    soundMode
+                      ? buttonSound
+                      : null
+                    }
+                  >
                     Send Message
                   </button>
                 </li>

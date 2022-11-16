@@ -1,10 +1,19 @@
 import React, { useContext } from 'react';
-import { FaMoon, FaSun, FaVolumeUp } from 'react-icons/fa';
+import {
+  FaMoon, FaSun, FaVolumeUp, FaVolumeOff,
+} from 'react-icons/fa';
+import useSound from 'use-sound';
+import allowSound from '../assets/sounds/open.wav';
+import disableSound from '../assets/sounds/close.wav';
 import ThemeContext from '../context/theme/ThemeContext';
+import SoundContext from '../context/sound/SoundContext';
 
 const Config = () => {
   const { darkMode, handleTheme } = useContext(ThemeContext);
-
+  const { soundMode, handleSound } = useContext(SoundContext);
+  const [openSound] = useSound(allowSound);
+  const [closeSound] = useSound(disableSound);
+  console.log(soundMode);
   return (
     <div
       className={
@@ -31,13 +40,35 @@ const Config = () => {
 
       }
       </button>
-      <FaVolumeUp
-        className={
+      <button
+        type="button"
+        className="config__btn"
+        onClick={handleSound}
+      >
+        {
+          soundMode
+            ? (
+              <FaVolumeOff
+                onClick={closeSound}
+                className={
         darkMode
           ? 'config__icon'
           : 'config__icon-light'
       }
-      />
+              />
+            ) : (
+              <FaVolumeUp
+                onClick={openSound}
+                className={
+        darkMode
+          ? 'config__icon'
+          : 'config__icon-light'
+      }
+              />
+            )
+}
+
+      </button>
     </div>
   );
 };

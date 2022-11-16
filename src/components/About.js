@@ -1,7 +1,11 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
+import { MdDownload } from 'react-icons/md';
+import useSound from 'use-sound';
+import hoverButton from '../assets/sounds/hoverButton.wav';
 import dino from '../assets/img/dino1.jpeg';
 import ThemeContext from '../context/theme/ThemeContext';
+import SoundContext from '../context/sound/SoundContext';
 
 const imageAnimate = {
   offscreen: { x: -100, opacity: 0 },
@@ -34,6 +38,8 @@ const textAnimate = {
 
 const About = () => {
   const { darkMode } = useContext(ThemeContext);
+  const { soundMode } = useContext(SoundContext);
+  const [buttonSound] = useSound(hoverButton);
   return (
     <motion.div
       className={
@@ -73,6 +79,23 @@ const About = () => {
             skills in communication, teamwork, work ethics, and work with deadlines.
           </motion.p>
           <br />
+          <button
+            className="about__info-button btn"
+            type="button"
+            onMouseOver={
+          soundMode
+            ? buttonSound
+            : null
+          }
+            onFocus={
+          soundMode
+            ? buttonSound
+            : null
+          }
+          >
+            <span>RESUME</span>
+            <MdDownload />
+          </button>
         </div>
         <motion.img
           className="about__img"

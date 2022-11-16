@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { motion } from 'framer-motion';
+import useSound from 'use-sound';
+import hoverButton from '../assets/sounds/hoverButton.wav';
 import ThemeContext from '../context/theme/ThemeContext';
+import SoundContext from '../context/sound/SoundContext';
 
 const Hero = () => {
   const { darkMode } = useContext(ThemeContext);
-
+  const { soundMode } = useContext(SoundContext);
+  const [buttonSound] = useSound(hoverButton);
   return (
     <motion.section
       className={
@@ -125,7 +129,22 @@ const Hero = () => {
         you like what you see and have a project you need coded, don’t
         hestiate to contact me.
       </p>
-      <button className="btn" type="button">LET’S CONNECT</button>
+      <button
+        className="btn"
+        type="button"
+        onMouseOver={
+          soundMode
+            ? buttonSound
+            : null
+          }
+        onFocus={
+          soundMode
+            ? buttonSound
+            : null
+          }
+      >
+        LET’S CONNECT
+      </button>
     </motion.section>
   );
 };
