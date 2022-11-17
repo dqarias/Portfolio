@@ -1,7 +1,7 @@
 .portfolio {
   background-color: $primary-color-dark;
   min-height: calc(100vh - 7.5rem);
-  padding-top: 3rem;
+  padding-top: 8rem;
 
   &-light{
     background-color: $primary-color-light;
@@ -43,9 +43,13 @@
 
   &__text{
     color: $white-color-dark;
-    font-family: $font-titles;
+    font-family: $font-titles-2;
     font-size: 2rem;
     padding-bottom: 2.4rem;
+    
+    &-light{
+      color: $black-color-light;
+    }
   }
 
   &-button{

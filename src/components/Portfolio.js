@@ -60,6 +60,7 @@ const Portfolio = () => {
   };
   return (
     <motion.div
+      id="work"
       className={
         darkMode
           ? 'portfolio'
@@ -79,7 +80,12 @@ const Portfolio = () => {
         </motion.h2>
         <span className="portfolio__line" />
       </div>
-      <div className="portfolio__text">
+      <div className={
+        darkMode
+          ? 'portfolio__text'
+          : 'portfolio__text portfolio__text-light'
+      }
+      >
         <p>Featured Projects</p>
       </div>
 

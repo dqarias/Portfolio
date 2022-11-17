@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { CgCloseO } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -53,19 +53,25 @@ const Header = () => {
         animate={{ y: -10 }}
         transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
       >
-        <motion.img
-          className="navigation__img"
-          src={
+        <HashLink
+          to="/#hero"
+          className="navigation__hash"
+        >
+          <motion.img
+            className="navigation__img"
+            src={
             darkMode
               ? logoWhite
               : logob
           }
-          alt="logo"
-        />
+            alt="logo"
+          />
+        </HashLink>
+
         <ul
           className="navigation__menu"
         >
-          <NavLink to="/about">
+          <HashLink to="/#about">
             <li
               className={
               darkMode
@@ -75,8 +81,8 @@ const Header = () => {
             >
               About
             </li>
-          </NavLink>
-          <NavLink to="/portfolio">
+          </HashLink>
+          <HashLink to="/#work">
             <li
               className={
                 darkMode
@@ -86,8 +92,8 @@ const Header = () => {
             >
               Work
             </li>
-          </NavLink>
-          <NavLink to="/contact">
+          </HashLink>
+          <HashLink to="/#contact">
             <li
               className={
                 darkMode
@@ -97,7 +103,7 @@ const Header = () => {
             >
               Contact
             </li>
-          </NavLink>
+          </HashLink>
         </ul>
         <div className={
           darkMode
@@ -119,8 +125,15 @@ const Header = () => {
               <motion.ul
                 className="navigation__hamburguer-menu"
               >
-                <motion.img className="navigation__hamburguer-menu-img" src={logow} alt="logo" />
-                <NavLink to="/about">
+                <HashLink to="/#hero">
+                  <motion.img
+                    className="navigation__hamburguer-menu-img"
+                    src={logow}
+                    alt="logo"
+                    onClick={closeMenu}
+                  />
+                </HashLink>
+                <HashLink to="/#about">
                   <motion.li
                     className="navigation__hamburguer-menu-link"
                     onClick={closeMenu}
@@ -138,8 +151,8 @@ const Header = () => {
                   >
                     About
                   </motion.li>
-                </NavLink>
-                <NavLink to="/portfolio">
+                </HashLink>
+                <HashLink to="/#work">
                   <motion.li
                     className="navigation__hamburguer-menu-link"
                     onClick={closeMenu}
@@ -157,8 +170,8 @@ const Header = () => {
                   >
                     Work
                   </motion.li>
-                </NavLink>
-                <NavLink to="/contact">
+                </HashLink>
+                <HashLink to="/#contact">
                   <motion.li
                     className="navigation__hamburguer-menu-link"
                     onClick={closeMenu}
@@ -176,7 +189,7 @@ const Header = () => {
                   >
                     Contact
                   </motion.li>
-                </NavLink>
+                </HashLink>
                 <motion.div
                   className="navigation__hamburguer-menu-config"
                   initial={{ y: 80, opacity: 0 }}
@@ -278,7 +291,6 @@ const Header = () => {
           }
         </div>
       </motion.nav>
-
     </>
 
   );

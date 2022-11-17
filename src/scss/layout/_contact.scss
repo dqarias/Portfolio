@@ -2,7 +2,7 @@
   background-color: $primary-color-dark;
   min-height: 50vh;
   font-family: $font-titles-1;
-  padding-top: 10rem;
+  padding-top: 8rem;
   padding-bottom: 10rem;
 
   &-light{
@@ -13,6 +13,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 2rem;
+    padding-top: 14rem;
   }
 
   &__send-message {

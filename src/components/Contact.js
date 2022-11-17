@@ -29,12 +29,12 @@ const Contact = () => {
 
   return (
     <motion.section
+      id="contact"
       className={
         darkMode
           ? 'contact'
           : 'contact contact-light'
       }
-      id="contact-me"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.5 }}

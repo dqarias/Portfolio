@@ -57,6 +57,7 @@ const About = () => {
 
   return (
     <motion.div
+      id="about"
       className={
       darkMode
         ? 'about'
