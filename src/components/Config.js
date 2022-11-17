@@ -13,7 +13,7 @@ const Config = () => {
   const { soundMode, handleSound } = useContext(SoundContext);
   const [openSound] = useSound(allowSound);
   const [closeSound] = useSound(disableSound);
-  console.log(soundMode);
+
   return (
     <div
       className={

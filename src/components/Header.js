@@ -3,8 +3,14 @@ import { NavLink } from 'react-router-dom';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { CgCloseO } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaMoon, FaSun, FaVolumeUp } from 'react-icons/fa';
+import {
+  FaMoon, FaSun, FaVolumeUp, FaVolumeOff,
+} from 'react-icons/fa';
+import useSound from 'use-sound';
+import allowSound from '../assets/sounds/open.wav';
+import disableSound from '../assets/sounds/close.wav';
 import ThemeContext from '../context/theme/ThemeContext';
+import SoundContext from '../context/sound/SoundContext';
 import logow from '../assets/img/logow.png';
 import logob from '../assets/img/logocd.png';
 import logoWhite from '../assets/img/logoWhite.png';
@@ -12,7 +18,9 @@ import logoWhite from '../assets/img/logoWhite.png';
 const Header = () => {
   const { darkMode, handleTheme } = useContext(ThemeContext);
   const [open, setOpen] = useState(false);
-
+  const { soundMode, handleSound } = useContext(SoundContext);
+  const [openSound] = useSound(allowSound);
+  const [closeSound] = useSound(disableSound);
   const isOpen = () => {
     setOpen(true);
   };
@@ -204,7 +212,38 @@ const Header = () => {
 
                 }
                   </button>
-                  <FaVolumeUp />
+                  <button
+                    type="button"
+                    className="navigation__hamburguer-menu-config-btn"
+                    onClick={() => {
+                      handleSound();
+                      setOpen(false);
+                    }}
+                  >
+                    {
+                      soundMode
+                        ? (
+                          <FaVolumeUp
+                            onClick={closeSound}
+                            className={
+                              darkMode
+                                ? 'config__icon'
+                                : 'config__icon-light'
+                              }
+                          />
+                        ) : (
+                          <FaVolumeOff
+                            onClick={openSound}
+                            className={
+                                darkMode
+                                  ? 'config__icon'
+                                  : 'config__icon-light'
+                              }
+                          />
+                        )
+}
+
+                  </button>
                 </motion.div>
               </motion.ul>
 
