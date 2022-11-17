@@ -9,6 +9,16 @@ import hoverButton from '../assets/sounds/hoverButton.wav';
 import ThemeContext from '../context/theme/ThemeContext';
 import SoundContext from '../context/sound/SoundContext';
 
+const textAnimate = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 const Hero = () => {
   const { darkMode } = useContext(ThemeContext);
   const { soundMode } = useContext(SoundContext);
@@ -26,13 +36,17 @@ const Hero = () => {
         ? 'hero'
         : 'hero hero-light'
     }
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.5 }}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 0.5 }}
     >
-      <h2 className="hero__title-1">
+      <motion.h2
+        className="hero__title-1"
+        variants={textAnimate}
+      >
         Hi, My Name is
-      </h2>
+      </motion.h2>
       <div className={
         darkMode
           ? 'hero__title-2'
@@ -149,21 +163,23 @@ const Hero = () => {
             </div>
           </div>
         )}
-      <p
+      <motion.p
         className={
         darkMode
           ? 'hero__description'
           : 'hero__description hero__description-light'
       }
+        variants={textAnimate}
       >
         I can help you build a product ,
         feature or website. Look through some of my work and experience! If
         you like what you see and have a project you need coded, don’t
         hestiate to contact me.
-      </p>
+      </motion.p>
       <HashLink to="/#contact">
-        <button
+        <motion.button
           className="btn"
+          variants={textAnimate}
           type="button"
           onMouseOver={
           soundMode
@@ -177,7 +193,7 @@ const Hero = () => {
           }
         >
           LET’S CONNECT
-        </button>
+        </motion.button>
       </HashLink>
 
     </motion.section>

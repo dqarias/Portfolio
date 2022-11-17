@@ -11,6 +11,20 @@ import Project from './Project';
 import ThemeContext from '../context/theme/ThemeContext';
 import SoundContext from '../context/sound/SoundContext';
 
+const imageAnimate = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1,
+    },
+  },
+
+};
+
 const textAnimate = {
   offscreen: { y: 100, opacity: 0 },
   onscreen: {
@@ -70,7 +84,7 @@ const Portfolio = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.5 }}
-      transition={{ staggerChildren: 0.5 }}
+      transition={{ staggerChildren: 0.4 }}
     >
       <div className="portfolio__tl">
         <motion.h2
@@ -81,32 +95,38 @@ const Portfolio = () => {
         </motion.h2>
         <span className="portfolio__line" />
       </div>
-      <div className={
+      <motion.div
+        className={
         darkMode
           ? 'portfolio__text'
           : 'portfolio__text portfolio__text-light'
       }
+        variants={textAnimate}
       >
-        <p>Featured Projects</p>
-      </div>
-
-      <Slider {...settings}>
-        {projects.map((project) => (
-          <Project
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            language={project.language}
-            live={project.live}
-            source={project.source}
-            darkMode={darkMode}
-          />
-        ))}
-      </Slider>
+        <p>Some of my featured projects.</p>
+      </motion.div>
+      <motion.div
+        variants={imageAnimate}
+      >
+        <Slider {...settings}>
+          {projects.map((project) => (
+            <Project
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              language={project.language}
+              live={project.live}
+              source={project.source}
+              darkMode={darkMode}
+            />
+          ))}
+        </Slider>
+      </motion.div>
       <NavLink to="/projects">
-        <button
+        <motion.button
           className="portfolio-button btn"
+          variants={textAnimate}
           type="button"
           onMouseOver={
           soundMode
@@ -120,7 +140,7 @@ const Portfolio = () => {
           }
         >
           <span>SEE MORE</span>
-        </button>
+        </motion.button>
       </NavLink>
     </motion.div>
   );

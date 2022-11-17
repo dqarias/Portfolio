@@ -12,10 +12,10 @@ const imageAnimate = {
   onscreen: {
     x: 0,
     opacity: 1,
-    rotate: [0, 10, 0],
+    rotate: [0, 20, 0],
     transition: {
       type: 'spring',
-      bounce: 0.4,
+      bounce: 0.6,
       duration: 1,
     },
   },

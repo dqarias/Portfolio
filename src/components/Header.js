@@ -11,7 +11,6 @@ import allowSound from '../assets/sounds/open.wav';
 import disableSound from '../assets/sounds/close.wav';
 import ThemeContext from '../context/theme/ThemeContext';
 import SoundContext from '../context/sound/SoundContext';
-import logow from '../assets/img/logow.png';
 import logob from '../assets/img/logocd.png';
 import logoWhite from '../assets/img/logoBrandDino.png';
 
@@ -128,7 +127,7 @@ const Header = () => {
                 <HashLink to="/#hero">
                   <motion.img
                     className="navigation__hamburguer-menu-img"
-                    src={logow}
+                    src={logoWhite}
                     alt="logo"
                     onClick={closeMenu}
                   />

@@ -38,7 +38,7 @@ const Contact = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.5 }}
-      transition={{ staggerChildren: 0.5 }}
+      transition={{ staggerChildren: 0.2 }}
     >
       <div
         className="contact__send-message"
@@ -57,7 +57,10 @@ const Contact = () => {
               onSubmit={handleSubmit}
             >
               <ul className="contact__message-form">
-                <li className="contact__message-list">
+                <motion.li
+                  className="contact__message-list"
+                  variants={textAnimate}
+                >
                   <input
                     className={
                       darkMode
@@ -83,8 +86,11 @@ const Contact = () => {
                     placeholder="Write your email"
                     required
                   />
-                </li>
-                <li className="contact__message-list">
+                </motion.li>
+                <motion.li
+                  className="contact__message-list"
+                  variants={textAnimate}
+                >
                   <textarea
                     className={
                       darkMode
@@ -99,7 +105,7 @@ const Contact = () => {
                     maxLength="500"
                     required
                   />
-                </li>
+                </motion.li>
                 <li>
                   <ValidationError
                     className="contact__message-input-error"
@@ -108,7 +114,10 @@ const Contact = () => {
                     errors={state.errors}
                   />
                 </li>
-                <li className="contact__message-button">
+                <motion.li
+                  className="contact__message-button"
+                  variants={textAnimate}
+                >
                   <button
                     className="btn"
                     type="submit"
@@ -126,7 +135,7 @@ const Contact = () => {
                   >
                     SEND MESSAGE
                   </button>
-                </li>
+                </motion.li>
               </ul>
             </form>
           )}
@@ -144,34 +153,47 @@ const Contact = () => {
         >
           Get in touch
         </motion.h3>
-        <p className={
+        <motion.p
+          className={
           darkMode
             ? 'contact__info'
             : 'contact__info contact__info-light'
         }
+          variants={textAnimate}
         >
           If you have an application you are interested
           in developing, a feature that you need built
           or a project that needs coding. I’d love
           to help with it.
-        </p>
-        <div className="contact__get-info-contact">
-          <p className="contact__get-info-details">
+        </motion.p>
+        <motion.div
+          className="contact__get-info-contact"
+        >
+          <motion.p
+            className="contact__get-info-details"
+            variants={textAnimate}
+          >
             <MdLocationOn className="contact__get-info-icons" />
             {' '}
             <span>Puno, Peru</span>
-          </p>
-          <p className="contact__get-info-details">
+          </motion.p>
+          <motion.p
+            className="contact__get-info-details"
+            variants={textAnimate}
+          >
             <MdSmartphone className="contact__get-info-icons" />
             {' '}
             <span>(+51) 991258588</span>
-          </p>
-          <p className="contact__get-info-details">
+          </motion.p>
+          <motion.p
+            className="contact__get-info-details"
+            variants={textAnimate}
+          >
             <MdEmail className="contact__get-info-icons" />
             {' '}
             <span>dino.quispea@gmail.com</span>
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
     </motion.section>
   );

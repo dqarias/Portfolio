@@ -122,27 +122,28 @@
       padding: 1rem 2rem;
       font-family: $font-titles-2;
       margin: 0.5rem;
-      background-color: #f5f5f5;
+      background-color: #f8fafc;
 
       &-light{
-        background-color: #f5f5f5;
+        background-color: #f8fafc;
+        border: 1px solid $primary-color-dark;
         &:focus {
           outline-color: $secondary-color-dark;
-          background-color: #f5f5f5;
+          background-color: #f8fafc;
         }
         
       }
 
       &:focus {
         outline-color: $secondary-color-dark;
-        background-color: #f5f5f5;
+        background-color: #f8fafc;
       }
 
       &:-webkit-autofill,
       &:-webkit-autofill:hover,
       &:-webkit-autofill:focus,
       &:-webkit-autofill:active {
-        box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+        box-shadow: 0 0 0 30px #f8fafc inset !important;
       }
 
       &-error {

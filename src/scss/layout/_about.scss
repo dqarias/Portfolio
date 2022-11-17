@@ -77,11 +77,11 @@
   &__img {
     width: 14rem;
     align-self: center;
-    filter: grayscale(1);
+    filter: grayscale(0);
 
     &:hover {
-      filter: grayscale(0);
       transform: rotate(5deg);
+      filter: grayscale(1);
       scale: 1.2;
     }
 
