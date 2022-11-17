@@ -1,8 +1,10 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useContext } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
+import TextSpan from './TextSpan';
 import hoverButton from '../assets/sounds/hoverButton.wav';
 import ThemeContext from '../context/theme/ThemeContext';
 import SoundContext from '../context/sound/SoundContext';
@@ -11,6 +13,7 @@ const Hero = () => {
   const { darkMode } = useContext(ThemeContext);
   const { soundMode } = useContext(SoundContext);
   const [buttonSound] = useSound(hoverButton);
+  const sentence2 = 'Dino Quispe'.split('');
   return (
     <motion.section
       id="hero"
@@ -23,16 +26,39 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
     >
-      <h2 className="hero__title-1">Hi, my name is</h2>
-      <h2
-        className={
+      <h2 className="hero__title-1">
+        Hi, My Name is
+      </h2>
+      <div className={
         darkMode
           ? 'hero__title-2'
-          : 'hero__title-2 hero__title-2-light'
+          : 'hero__title-2-ns'
       }
       >
-        Dino Quispe
-      </h2>
+        {sentence2.map((letter, i) => (
+          <TextSpan
+            key={i * 100}
+            darkMode={darkMode}
+          >
+            {letter === ' ' ? '\u00A0' : letter}
+          </TextSpan>
+        ))}
+      </div>
+      <div className={
+        darkMode
+          ? 'hero__title-2-light-ns'
+          : 'hero__title-2-light'
+      }
+      >
+        {sentence2.map((letter, i) => (
+          <TextSpan
+            key={i * 10000}
+            darkMode={darkMode}
+          >
+            {letter === ' ' ? '\u00A0' : letter}
+          </TextSpan>
+        ))}
+      </div>
       {darkMode
         ? (
           <div>
