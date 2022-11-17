@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Project from '../components/Project';
 import projects from '../data/projects';
 import ThemeContext from '../context/theme/ThemeContext';
 
 const Work = () => {
   const { darkMode } = useContext(ThemeContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="work">

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
 import hoverButton from '../assets/sounds/hoverButton.wav';
@@ -104,7 +104,7 @@ const Portfolio = () => {
           />
         ))}
       </Slider>
-      <Link to="/projects">
+      <NavLink to="/projects">
         <button
           className="portfolio-button btn"
           type="button"
@@ -121,7 +121,7 @@ const Portfolio = () => {
         >
           <span>SEE MORE</span>
         </button>
-      </Link>
+      </NavLink>
     </motion.div>
   );
 };
