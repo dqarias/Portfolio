@@ -3,9 +3,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
+import useSound from 'use-sound';
+import hoverButton from '../assets/sounds/hoverButton.wav';
 import projects from '../data/projects';
 import Project from './Project';
 import ThemeContext from '../context/theme/ThemeContext';
+import SoundContext from '../context/sound/SoundContext';
 
 const textAnimate = {
   offscreen: { y: 100, opacity: 0 },
@@ -23,6 +26,8 @@ const textAnimate = {
 
 const Portfolio = () => {
   const { darkMode } = useContext(ThemeContext);
+  const { soundMode } = useContext(SoundContext);
+  const [buttonSound] = useSound(hoverButton);
   const settings = {
     dots: true,
     infinite: true,
@@ -74,6 +79,9 @@ const Portfolio = () => {
         </motion.h2>
         <span className="portfolio__line" />
       </div>
+      <div className="portfolio__text">
+        <p>Featured Projects</p>
+      </div>
 
       <Slider {...settings}>
         {projects.map((project) => (
@@ -89,6 +97,22 @@ const Portfolio = () => {
           />
         ))}
       </Slider>
+      <button
+        className="portfolio-button btn"
+        type="button"
+        onMouseOver={
+          soundMode
+            ? buttonSound
+            : null
+          }
+        onFocus={
+          soundMode
+            ? buttonSound
+            : null
+          }
+      >
+        <span>SEE MORE</span>
+      </button>
     </motion.div>
   );
 };

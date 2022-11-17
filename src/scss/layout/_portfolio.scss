@@ -10,7 +10,7 @@
   &__tl {
     display: flex;
     align-items: center;
-    padding-bottom: 3.6rem;
+    padding-bottom: 1.6rem;
   }
 
   &__title {
@@ -41,6 +41,16 @@
     }
   }
 
+  &__text{
+    color: $white-color-dark;
+    font-family: $font-titles;
+    font-size: 2rem;
+    padding-bottom: 2.4rem;
+  }
+
+  &-button{
+    margin-top: 2rem;
+  }
 
   &__card {
     background-color: #2b2b2b;
@@ -107,12 +117,12 @@
 
         @include for-tablet-portrait-up {
           font-size: 1.6rem;
-          min-height: 10rem;
+          min-height: 8rem;
         }
 
         @include for-tablet-landscape-up {
           font-size: 1.6rem;
-          min-height: 10rem;
+          min-height: 8rem;
         }
       }
 
@@ -171,17 +181,28 @@
 }
 
 @include for-tablet-portrait-up {
+  
+  .slick-prev {
+    left: -4.5rem !important;
+  }
+
+  .slick-prev {
+    right: -4rem !important;
+  }
+
   .slick-prev::before,
   .slick-next::before {
-    color: $secondary-color-dark;
+    color: $secondary-color-dark !important;
+    font-size: 4rem !important;
     display: inline-block;
   }
 
-  .slick-dots li button::before {
-    color: $secondary-color-dark;
+  .slick-dots li button:before{
+    color: $secondary-color-dark !important;
   }
 
   .slick-dots li.slick-active button::before {
-    color: $white-color-dark;
+    color: $white-color-dark !important;
   }
 }
+
