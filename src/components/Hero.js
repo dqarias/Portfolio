@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { motion } from 'framer-motion';
@@ -14,6 +14,10 @@ const Hero = () => {
   const { soundMode } = useContext(SoundContext);
   const [buttonSound] = useSound(hoverButton);
   const sentence2 = 'Dino Quispe'.split('');
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.section
       id="hero"

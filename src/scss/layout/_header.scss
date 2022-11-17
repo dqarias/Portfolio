@@ -3,7 +3,7 @@
   background-color: $primary-color-dark;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 4%;
+  padding: 2% 5%;
   width: 100%;
   height: 7.5rem;
   position: fixed;
@@ -83,7 +83,7 @@
         font-weight: 700;
 
         &-light{
-          color: $black-color-light;
+          color: $secondary-color-light;
         }
       }
 
@@ -111,7 +111,7 @@
     font-weight: 700;
 
     &-light{
-      color: $black-color-light;
+      color: $secondary-color-light;
     }
   }
 }

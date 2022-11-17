@@ -26,7 +26,7 @@
     font-size: 2.5rem;
 
     &-light{
-      color: $black-color-light;
+      color: $secondary-color-light;
       font-size: 2.5rem;
       &:hover {
         color: #a3225e;
@@ -43,7 +43,7 @@
   &-info {
     color: $white-color-dark;
     &-light{
-      color: $black-color-light;
+      color: $secondary-color-light;
     }
   }
 }
