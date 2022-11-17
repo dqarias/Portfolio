@@ -49,8 +49,9 @@
   }
 
   &__description {
+    font-family: $font-titles;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 100;
     color: $white-color-dark;
     line-height: 1.6;
     padding-bottom: 4rem;

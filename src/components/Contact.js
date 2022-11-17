@@ -124,7 +124,7 @@ const Contact = () => {
                       : null
                     }
                   >
-                    Send Message
+                    SEND MESSAGE
                   </button>
                 </li>
               </ul>

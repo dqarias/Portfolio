@@ -13,7 +13,7 @@ import ThemeContext from '../context/theme/ThemeContext';
 import SoundContext from '../context/sound/SoundContext';
 import logow from '../assets/img/logow.png';
 import logob from '../assets/img/logocd.png';
-import logoWhite from '../assets/img/logoWhite.png';
+import logoWhite from '../assets/img/logoBrandDino.png';
 
 const Header = () => {
   const { darkMode, handleTheme } = useContext(ThemeContext);
