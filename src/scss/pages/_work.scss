@@ -1,0 +1,21 @@
+.work{
+    padding-top: 10rem;
+    padding-left: 6%;
+    padding-right: 6%;
+
+    &__card{
+        padding: 2rem;
+        @include for-tablet-landscape-up {
+            float: left;
+            width: 50%;
+            padding: 2rem 1.2rem;
+          }
+    
+    }
+
+    @include for-tablet-landscape-up {
+        padding-left: 3%;
+        padding-right: 3%;
+      }
+
+}

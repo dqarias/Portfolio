@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
@@ -130,22 +131,25 @@ const Hero = () => {
         you like what you see and have a project you need coded, don’t
         hestiate to contact me.
       </p>
-      <button
-        className="btn"
-        type="button"
-        onMouseOver={
+      <HashLink to="/#contact">
+        <button
+          className="btn"
+          type="button"
+          onMouseOver={
           soundMode
             ? buttonSound
             : null
           }
-        onFocus={
+          onFocus={
           soundMode
             ? buttonSound
             : null
           }
-      >
-        LET’S CONNECT
-      </button>
+        >
+          LET’S CONNECT
+        </button>
+      </HashLink>
+
     </motion.section>
   );
 };

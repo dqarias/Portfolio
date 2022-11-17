@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
 import hoverButton from '../assets/sounds/hoverButton.wav';
@@ -103,22 +104,24 @@ const Portfolio = () => {
           />
         ))}
       </Slider>
-      <button
-        className="portfolio-button btn"
-        type="button"
-        onMouseOver={
+      <Link to="/projects">
+        <button
+          className="portfolio-button btn"
+          type="button"
+          onMouseOver={
           soundMode
             ? buttonSound
             : null
           }
-        onFocus={
+          onFocus={
           soundMode
             ? buttonSound
             : null
           }
-      >
-        <span>SEE MORE</span>
-      </button>
+        >
+          <span>SEE MORE</span>
+        </button>
+      </Link>
     </motion.div>
   );
 };
