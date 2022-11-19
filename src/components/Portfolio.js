@@ -91,7 +91,7 @@ const Portfolio = () => {
           className="portfolio__title"
           variants={textAnimate}
         >
-          Portfolio
+          Projects
         </motion.h2>
         <span className="portfolio__line" />
       </div>
@@ -103,7 +103,7 @@ const Portfolio = () => {
       }
         variants={textAnimate}
       >
-        <p>Some of my featured projects.</p>
+        <p>Swipe to see a small selection of projects I have worked on.</p>
       </motion.div>
       <motion.div
         variants={imageAnimate}

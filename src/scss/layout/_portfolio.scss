@@ -76,8 +76,11 @@
     }
 
     &-image{
-      position: relative;
       cursor: pointer;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+     
       &-main {
         display: block;
         width: 100%;
@@ -101,16 +104,17 @@
         opacity: 0;
         transform: translate(-50%, -50%);
         text-align: center;
-        top: 12.5rem;
-        left: 50%;
+        top: 20rem;
+        left: 10%;
 
         &-img{
-          width: 12.5rem;
+          width: 8rem;
         }
       }
       
-      &:hover{
+      &:hover .portfolio__card-image-main{
         filter: grayscale(0.3);
+        transform: scale(1.1);
       }
 
       &:hover .portfolio__card-image-bg {
