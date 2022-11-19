@@ -12,12 +12,12 @@
   top: 0;
   left: 0;
   z-index: 1;
- 
-  &__light{
+
+  &__light {
     background-color: $primary-color-light;
   }
 
-  &__hash{
+  &__hash {
     display: none;
 
     @include for-tablet-portrait-up {
@@ -43,7 +43,6 @@
     }
   }
 
-  
   &__hamburguer {
     color: $white-color-dark;
     font-size: 2.4rem;
@@ -84,19 +83,19 @@
         font-size: 2rem;
         font-weight: 700;
 
-        &-light{
+        &-light {
           color: $secondary-color-light;
         }
       }
 
-      &-config{
+      &-config {
         position: absolute;
         bottom: 0;
         display: flex;
         padding-bottom: 8rem;
         gap: 2.4rem;
 
-        &-btn{
+        &-btn {
           background-color: transparent;
           color: $white-color-dark;
           font-size: 2.4rem;
@@ -112,12 +111,12 @@
     font-size: 1.8rem;
     font-weight: 700;
 
-    &-light{
+    &-light {
       color: $secondary-color-light;
     }
 
-    &:hover { 
-      color: $secondary-color-dark; 
+    &:hover {
+      color: $secondary-color-dark;
     }
   }
 }
@@ -131,8 +130,7 @@
   z-index: 1;
   cursor: pointer;
 
-  &-light{
+  &-light {
     color: $black-color-light;
   }
 }
-

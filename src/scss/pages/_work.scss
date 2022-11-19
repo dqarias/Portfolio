@@ -1,59 +1,57 @@
-.work{
-    padding-top: 8rem;
-    padding-left: 6%;
-    padding-right: 6%;
+.work {
+  padding-top: 8rem;
+  padding-left: 6%;
+  padding-right: 6%;
 
-    &__title {
-      font-family: $font-titles-1;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: $secondary-color-dark;
-      text-align: center;
-      padding-bottom: 1.6rem;
-  
-  
-      @include for-tablet-portrait-up {
-        font-size: 3rem;
-      }
-  
-      @include for-tablet-landscape-up {
-        font-size: 4rem;
-      }
-    }
+  &__title {
+    font-family: $font-titles-1;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: $secondary-color-dark;
+    text-align: center;
+    padding-bottom: 1.6rem;
 
-    &__text{
-      color: $white-color-dark;
-      font-family: $font-titles;
-      font-size: 1.6rem;
-      padding-bottom: 2.4rem;
-      text-align: center;
-      
-      &-light{
-        color: $black-color-light;
-      }
-  
-      @include for-tablet-portrait-up {
-        font-size: 1.8rem;
-      }
-  
-      @include for-tablet-landscape-up {
-        font-size: 1.8rem;
-      }
-    }
-
-    &__card{
-        padding: 2rem;
-        @include for-tablet-landscape-up {
-            float: left;
-            width: 50%;
-            padding: 2rem 1.2rem;
-          }
-    
+    @include for-tablet-portrait-up {
+      font-size: 3rem;
     }
 
     @include for-tablet-landscape-up {
-        padding-left: 3%;
-        padding-right: 3%;
-      }
+      font-size: 4rem;
+    }
+  }
 
+  &__text {
+    color: $white-color-dark;
+    font-family: $font-titles;
+    font-size: 1.6rem;
+    padding-bottom: 2.4rem;
+    text-align: center;
+
+    &-light {
+      color: $black-color-light;
+    }
+
+    @include for-tablet-portrait-up {
+      font-size: 1.8rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__card {
+    padding: 2rem;
+
+    @include for-tablet-landscape-up {
+      float: left;
+      width: 50%;
+      padding: 2rem 1.2rem;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }

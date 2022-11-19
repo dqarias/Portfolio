@@ -3,7 +3,7 @@
   min-height: calc(100vh - 7.5rem);
   padding-top: 8rem;
 
-  &-light{
+  &-light {
     background-color: $primary-color-light;
   }
 
@@ -18,7 +18,6 @@
     font-size: 2.4rem;
     font-weight: 700;
     color: $secondary-color-dark;
-
 
     @include for-tablet-portrait-up {
       font-size: 3rem;
@@ -41,13 +40,13 @@
     }
   }
 
-  &__text{
+  &__text {
     color: $white-color-dark;
     font-family: $font-titles;
     font-size: 1.6rem;
     padding-bottom: 2.4rem;
-    
-    &-light{
+
+    &-light {
       color: $black-color-light;
     }
 
@@ -60,7 +59,7 @@
     }
   }
 
-  &-button{
+  &-button {
     margin-top: 2rem;
   }
 
@@ -70,17 +69,17 @@
     margin: 0 0.5rem;
     border-radius: 1rem;
 
-    &-light{
+    &-light {
       /* background-color: #f9f8fd; */
       background-color: #f8fafc;
     }
 
-    &-image{
+    &-image {
       cursor: pointer;
       position: relative;
       display: flex;
       overflow: hidden;
-     
+
       &-main {
         display: block;
         width: 100%;
@@ -88,9 +87,9 @@
         border-radius: 1rem;
         object-fit: contain;
         padding: 0.5rem;
-        transition: .5s ease;
+        transition: 0.5s ease;
         backface-visibility: hidden;
-  
+
         @include for-tablet-portrait-up {
           height: 25rem;
           object-fit: contain;
@@ -98,8 +97,8 @@
         }
       }
 
-      &-bg{
-        transition: .5s ease;
+      &-bg {
+        transition: 0.5s ease;
         position: absolute;
         opacity: 0;
         transform: translate(-50%, -50%);
@@ -107,12 +106,12 @@
         top: 20rem;
         left: 10%;
 
-        &-img{
+        &-img {
           width: 8rem;
         }
       }
-      
-      &:hover .portfolio__card-image-main{
+
+      &:hover .portfolio__card-image-main {
         filter: grayscale(0.3);
         transform: scale(1.1);
       }
@@ -121,10 +120,10 @@
         opacity: 1;
       }
     }
-    
 
     &-info {
       /* background-color: rgb(55, 63, 67); */
+
       /* background-color: rgb(30, 30, 30); */
       background-color: #1e2029;
       color: $white-color-dark;
@@ -133,7 +132,7 @@
       border-bottom-right-radius: 1rem;
       padding: 1.6rem 1.6rem;
 
-      &-light{
+      &-light {
         background-color: #fff;
         color: $black-color-light;
       }
@@ -193,7 +192,7 @@
         &-a {
           color: $white-color-dark;
 
-          &-light{
+          &-light {
             color: #002245;
           }
         }
@@ -226,12 +225,8 @@
 }
 
 @include for-tablet-portrait-up {
-  
   .slick-prev {
     left: -4.5rem !important;
-  }
-
-  .slick-prev {
     right: -4rem !important;
   }
 
@@ -242,7 +237,7 @@
     display: inline-block;
   }
 
-  .slick-dots li button:before{
+  .slick-dots li button::before {
     color: $secondary-color-dark !important;
   }
 
@@ -250,4 +245,3 @@
     color: $white-color-dark !important;
   }
 }
-

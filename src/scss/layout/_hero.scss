@@ -2,7 +2,7 @@
   min-height: calc(100vh - 7.5rem);
   background-color: $primary-color-dark;
 
-  &-light{
+  &-light {
     background-color: $primary-color-light;
   }
 
@@ -29,16 +29,15 @@
     display: none;
   }
 
-  &__title-2-light{
+  &__title-2-light {
     display: flex;
     color: $black-color-light;
     font-size: 3.2rem;
   }
 
-  &__title-2-light-ns{
+  &__title-2-light-ns {
     display: none;
   }
-
 
   &__title-3 {
     display: none;
@@ -56,7 +55,7 @@
     line-height: 1.6;
     padding-bottom: 4rem;
 
-    &-light{
+    &-light {
       color: $black-color-light;
     }
   }
@@ -92,7 +91,7 @@
   }
 }
 
-.span{
+.span {
   display: inline-block;
   font-weight: 700;
 }

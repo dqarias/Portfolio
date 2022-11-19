@@ -18,11 +18,11 @@
     left: 0;
     background-color: $primary-color-dark;
 
-    &__light{
-    background-color: $primary-color-light;  
+    &__light {
+      background-color: $primary-color-light;
     }
 
-    &__btn{
+    &__btn {
       background-color: transparent;
       cursor: pointer;
     }
@@ -32,13 +32,9 @@
       font-size: 2.5rem;
     }
 
-    &__icon-light{
+    &__icon-light {
       color: $secondary-color-light;
       font-size: 2.5rem;
     }
-
-    
   }
 }
-
-

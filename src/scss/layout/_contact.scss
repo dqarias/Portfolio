@@ -5,7 +5,7 @@
   padding-top: 8rem;
   padding-bottom: 10rem;
 
-  &-light{
+  &-light {
     background-color: $primary-color-light;
   }
 
@@ -42,7 +42,7 @@
     color: $white-color-dark;
     align-items: flex-start;
 
-    &-light{
+    &-light {
       color: $black-color-light;
     }
 
@@ -96,7 +96,7 @@
     line-height: 1.5;
     color: $white-color-dark;
 
-    &-light{
+    &-light {
       color: $black-color-light;
     }
 
@@ -124,14 +124,14 @@
       margin: 0.5rem;
       background-color: #f8fafc;
 
-      &-light{
+      &-light {
         background-color: #f8fafc;
         border: 1px solid $primary-color-dark;
+
         &:focus {
           outline-color: $secondary-color-dark;
           background-color: #f8fafc;
         }
-        
       }
 
       &:focus {

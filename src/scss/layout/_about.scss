@@ -7,7 +7,7 @@
   padding-top: 8rem;
   min-height: calc(100vh - 7.5rem);
 
-  &-light{
+  &-light {
     background-color: $primary-color-light;
   }
 
@@ -52,7 +52,7 @@
       color: $white-color-dark;
       padding-bottom: 2rem;
 
-      &-light{
+      &-light {
         color: $black-color-light;
       }
     }
@@ -78,7 +78,7 @@
     width: 14rem;
     align-self: center;
     filter: grayscale(0);
-    
+
     &:hover {
       transform: rotate(5deg);
       filter: grayscale(1);
@@ -91,9 +91,9 @@
   }
 }
 
-.about__info-button{
-      display: flex;
-      gap: 1.6rem;
-      justify-content: center;
-      align-items: center;
+.about__info-button {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: center;
 }
