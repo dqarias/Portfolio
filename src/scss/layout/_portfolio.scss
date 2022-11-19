@@ -44,11 +44,19 @@
   &__text{
     color: $white-color-dark;
     font-family: $font-titles;
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding-bottom: 2.4rem;
     
     &-light{
       color: $black-color-light;
+    }
+
+    @include for-tablet-portrait-up {
+      font-size: 1.8rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 1.8rem;
     }
   }
 
@@ -67,23 +75,49 @@
       background-color: #f8fafc;
     }
 
-    &-image {
-      width: 100%;
-      height: 25rem;
-      border-radius: 1rem;
-      object-fit: contain;
-      padding: 0.5rem;
-
-      &:hover {
-        filter: grayscale(1);
-      }
-
-      @include for-tablet-portrait-up {
+    &-image{
+      position: relative;
+      cursor: pointer;
+      &-main {
+        display: block;
+        width: 100%;
         height: 25rem;
+        border-radius: 1rem;
         object-fit: contain;
         padding: 0.5rem;
+        transition: .5s ease;
+        backface-visibility: hidden;
+  
+        @include for-tablet-portrait-up {
+          height: 25rem;
+          object-fit: contain;
+          padding: 0.5rem;
+        }
+      }
+
+      &-bg{
+        transition: .5s ease;
+        position: absolute;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        top: 12.5rem;
+        left: 50%;
+
+        &-img{
+          width: 12.5rem;
+        }
+      }
+      
+      &:hover{
+        filter: grayscale(0.3);
+      }
+
+      &:hover .portfolio__card-image-bg {
+        opacity: 1;
       }
     }
+    
 
     &-info {
       /* background-color: rgb(55, 63, 67); */

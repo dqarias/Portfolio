@@ -2,6 +2,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import imageBg from '../assets/img/view.png';
 
 const Project = ({
   title, description, image, language, live, source, darkMode,
@@ -12,9 +13,17 @@ const Project = ({
       : 'portfolio__card portfolio__card-light'
   }
   >
-    <div>
-      <img className="portfolio__card-image" src={image} alt={title} />
-    </div>
+    <a
+      className="portfolio__card-image"
+      href={live}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img className="portfolio__card-image-main" src={image} alt={title} />
+      <div className="portfolio__card-image-bg">
+        <img className="portfolio__card-image-bg-img" src={imageBg} alt="see project" />
+      </div>
+    </a>
     <div className={
       darkMode
         ? 'portfolio__card-info'
