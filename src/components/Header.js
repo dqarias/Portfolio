@@ -70,7 +70,9 @@ const Header = () => {
         <ul
           className="navigation__menu"
         >
-          <HashLink to="/#about">
+          <HashLink
+            to="/#about"
+          >
             <li
               className={
               darkMode

@@ -3,14 +3,16 @@
   background-color: $primary-color-dark;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
   width: 100%;
   height: 7.5rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  
+ 
   &__light{
     background-color: $primary-color-light;
   }
@@ -113,6 +115,10 @@
     &-light{
       color: $secondary-color-light;
     }
+
+    &:hover { 
+      color: $secondary-color-dark; 
+    }
   }
 }
 
@@ -129,3 +135,4 @@
     color: $black-color-light;
   }
 }
+

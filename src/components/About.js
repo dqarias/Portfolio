@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MdDownload } from 'react-icons/md';
 import useSound from 'use-sound';
 import hoverButton from '../assets/sounds/hoverButton.wav';
-import dino from '../assets/img/dino1.jpeg';
+import dino from '../assets/img/dino.jpg';
 import ThemeContext from '../context/theme/ThemeContext';
 import SoundContext from '../context/sound/SoundContext';
 
