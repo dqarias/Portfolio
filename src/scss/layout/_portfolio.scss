@@ -1,7 +1,7 @@
 .portfolio {
   background-color: $primary-color-dark;
   min-height: calc(100vh - 7.5rem);
-  padding-top: 8rem;
+  padding-top: 7rem;
 
   &-light {
     background-color: $primary-color-light;
@@ -60,7 +60,7 @@
   }
 
   &-button {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   &__card {
@@ -212,16 +212,16 @@
 
 .slick-prev::before,
 .slick-next::before {
-  color: $secondary-color-dark;
+  color: $secondary-color-dark !important;
   display: none;
 }
 
 .slick-dots li button::before {
-  color: $secondary-color-dark;
+  color: $secondary-color-dark !important;
 }
 
 .slick-dots li.slick-active button::before {
-  color: $white-color-dark;
+  color: $white-color-dark !important;
 }
 
 @include for-tablet-portrait-up {
