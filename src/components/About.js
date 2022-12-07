@@ -90,9 +90,9 @@ const About = () => {
           >
             Hi! 👋 I am Dino Quispe, and I am a full-stack web developer with an electronic
             engineer’s degree who is enthusiastic about technology. I completed coursework
-            at Microverse, where I’ve learned every day to code real projects in remote
+            at Microverse, where I learned every day to code real projects in remote
             pair programming with other developers around the world, and improved my
-            skills in communication, teamwork, work ethics, and work with deadlines.
+            skills in communication, teamwork, work ethics, and work under deadlines.
           </motion.p>
           <br />
           <button
