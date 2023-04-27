@@ -1,10 +1,11 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
 import TextSpan from './TextSpan';
+import MouseHoverAnimation from '../utils/mouse-hover-animation';
 import hoverButton from '../assets/sounds/hoverButton.wav';
 import ThemeContext from '../context/theme/ThemeContext';
 import SoundContext from '../context/sound/SoundContext';
@@ -23,11 +24,12 @@ const Hero = () => {
   const { darkMode } = useContext(ThemeContext);
   const { soundMode } = useContext(SoundContext);
   const [buttonSound] = useSound(hoverButton);
+  const cRef = useRef(null);
   const sentence2 = 'Dino Quispe'.split('');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  MouseHoverAnimation(cRef);
   return (
     <motion.section
       id="hero"
@@ -41,6 +43,7 @@ const Hero = () => {
       viewport={{ once: false, amount: 0.5 }}
       transition={{ duration: 0.5 }}
     >
+      <canvas id="c" ref={cRef}/>
       <motion.h2
         className="hero__title-1"
         variants={textAnimate}

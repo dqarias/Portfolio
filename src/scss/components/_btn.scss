@@ -6,7 +6,9 @@
   color: $secondary-color-dark;
   font-size: 1.6rem;
   font-weight: 700;
+  z-index: 5;
   cursor: pointer;
+  position: absolute;
 
   &:hover {
     color: $primary-color-dark;
