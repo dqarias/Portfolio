@@ -20,6 +20,7 @@
   }
 
   &__title-2 {
+    position: relative;
     display: flex;
     color: $white-color-dark;
     font-size: 3.2rem;
@@ -30,6 +31,7 @@
   }
 
   &__title-2-light {
+    position: relative;
     display: flex;
     color: $black-color-light;
     font-size: 3.2rem;
